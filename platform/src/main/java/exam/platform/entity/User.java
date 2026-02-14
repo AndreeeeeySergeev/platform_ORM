@@ -6,7 +6,7 @@ import lombok.Data;
 import org.jspecify.annotations.NonNull;
 
 @Entity
-@Table(name="user")
+@Table(name="users")
 @Data
 public class User {
 
@@ -36,5 +36,7 @@ public class User {
         this.email = email;
     }
 
+    @OneToOne(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Profile profile;
 
 }

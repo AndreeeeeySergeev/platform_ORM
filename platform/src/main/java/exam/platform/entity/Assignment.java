@@ -1,4 +1,4 @@
 package exam.platform.entity;
 
-public class Assigment {
+public class Assignment {
 }
