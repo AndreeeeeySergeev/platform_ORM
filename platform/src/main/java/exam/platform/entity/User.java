@@ -54,4 +54,7 @@ public class User {
 
     @OneToMany(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List <QuizSubmission> quizSubmissions = new ArrayList<>();
+
+    @OneToMany(mappedBy = "student", fetch=FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<CourseReview> reviews = new ArrayList<>();
 }
