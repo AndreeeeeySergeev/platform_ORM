@@ -24,15 +24,11 @@ public class Course {
     private User teacher;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="student_id",  nullable = true)
-    private User user;
-
-    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private Category category;
 
     @OneToMany(mappedBy = "course", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Enrollment> enrollemts = new ArrayList<>();
+    private List<Enrollment> enrollments = new ArrayList<>();
 
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List <Module> modules = new ArrayList<>();

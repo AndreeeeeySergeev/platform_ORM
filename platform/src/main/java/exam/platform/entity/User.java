@@ -46,7 +46,8 @@ public class User {
     private List<Course> coursesTaught = new ArrayList<>();
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Course> coursesLearn = new ArrayList<>();
+    private List<Enrollment> enrollments = new ArrayList<>();
+
 
 
 }
