@@ -20,6 +20,7 @@ public class User {
     private String firstName;
     @Column(nullable = false)
     private String lastName;
+
     private int telephone;
     @Column(nullable = false, unique = true)
     private String email;
@@ -48,6 +49,8 @@ public class User {
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Enrollment> enrollments = new ArrayList<>();
 
+    @OneToMany(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Submission> submissions = new ArrayList<>();
 
 
 }

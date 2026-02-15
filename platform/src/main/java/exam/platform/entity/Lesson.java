@@ -22,6 +22,6 @@ public class Lesson {
     private Module module;
 
     @OneToMany(mappedBy = "lesson", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Assignment> assignemnts = new ArrayList<>();
+    private List<Assignment> assignments = new ArrayList<>();
 
 }
