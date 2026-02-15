@@ -11,7 +11,7 @@ public class Profile {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     @Column(length=200)
     private String bio;
     @Column(name="avatar")
