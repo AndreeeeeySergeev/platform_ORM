@@ -3,7 +3,7 @@ package exam.platform.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name="enrollments")
@@ -22,7 +22,7 @@ public class Enrollment {
     private Course course;
 
     @Column(name = "enroll_date", nullable = false)
-    private LocalDate enrollDate;
+    private LocalDateTime enrollDate;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
