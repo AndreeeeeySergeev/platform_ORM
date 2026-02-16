@@ -14,30 +14,30 @@ Git (для клонирования репозитория)
 Проект организован по стандартному Maven‑шаблону:
 
 src/main/java/
-├── controller/          # REST-контроллеры (API-эндпоинты)
+`├── controller/          # REST-контроллеры (API-эндпоинты)
 ├── dto/               # Объекты передачи данных (DTO)
 ├── exception/         # Пользовательские исключения и обработчики
 ├── model/             # Сущности БД (JPA-модели)
 ├── repository/          # JPA-репозитории
 ├── service/            # Бизнес-логика и сервисы
-└── config/            # Конфигурация Spring (БД, MVC, Security)
+└── config/            # Конфигурация Spring (БД, MVC, Security)`
 
 
 src/test/java/
-├── controller/         # Тесты контроллеров (интеграционные)
+`├── controller/         # Тесты контроллеров (интеграционные)
 ├── service/           # Тесты сервисов (юнит-тесты)
 └── repository/          # Тесты репозиториев
-
+`
 
 src/main/resources/
 ├── application.properties  # Конфигурация приложения
 ├── db/migration/       # SQL-миграции (если используются)
 └── static/              # Статические ресурсы (опционально)
-Основные сущности (model):
 
-User — пользователь (id, name, email, role);
-Course — курс (id, title, description, teacherId);
-Enrollment — запись на курс (user, course);
+Основные сущности (entity):
+
+User — пользователь (id, firstName, lastName, email, telephone, role);
+Course — курс (id, title, description, startDate);
 Category — категория курса (id, name).
 
 3. Установка и запуск
