@@ -1,9 +1,8 @@
 package exam.platform.entity;
 
-import jakarta.annotation.Nonnull;
+
 import jakarta.persistence.*;
 import lombok.Data;
-import org.jspecify.annotations.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;

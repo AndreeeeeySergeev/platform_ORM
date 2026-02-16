@@ -8,7 +8,6 @@ import lombok.Data;
 @Table(name="profiles")
 @Data
 public class Profile {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

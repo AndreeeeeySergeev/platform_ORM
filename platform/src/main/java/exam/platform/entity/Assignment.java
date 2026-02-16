@@ -24,6 +24,7 @@ public class Assignment {
     @Column(name="due_date", nullable = false)
     private LocalDate dueDate;
 
+    @Column(name = "max_score")
     private Integer maxScore;
 
     @ManyToOne(fetch = FetchType.LAZY)

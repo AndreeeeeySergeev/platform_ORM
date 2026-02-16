@@ -3,6 +3,7 @@ package exam.platform.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.LocalDate;
 import java.util.*;
 
 @Entity
@@ -17,7 +18,8 @@ public class Course {
     @Column(columnDefinition = "TEXT")
     private String description;
     @Column(name="start_date")
-    private String startDate;
+    private LocalDate startDate;
+    private Integer duration;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="teacher_id", nullable = false)
