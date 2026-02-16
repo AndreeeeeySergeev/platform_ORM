@@ -39,10 +39,11 @@ src/main/resources/
 </pre>
 
 Основные сущности (entity):
-
+'''
 User — пользователь (id, firstName, lastName, email, telephone, role);
 Course — курс (id, title, description, startDate);
 Category — категория курса (id, name).
+'''
 
 3. Установка и запуск
    Вариант 1. Локальный запуск (без Docker)
@@ -56,30 +57,32 @@ cd platform_ORM`
 Создайте базу данных platform_db в PostgreSQL.
 
 В файле src/main/resources/application.properties укажите:
-
+'''
 `properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/platform_db
 spring.datasource.username=your_username
 spring.datasource.password=your_password`
-
+'''
 Соберите проект:
-
+'''
 `bash
 mvn clean package`
-
+'''
 Запустите приложение:
-
+'''
 `bash
 java -jar target/platform-orm.jar`
+''''
 Приложение будет доступно по адресу: http://localhost:8080.
 
 Вариант 2. Запуск через Docker Compose
 Убедитесь, что установлены Docker и Docker Compose.
 
 В корне проекта выполните:
-
+'''
 `bash
 docker-compose up -d`
+'''
 Приложение и PostgreSQL запустятся автоматически. Доступ:
 
 Приложение: http://localhost:8080
@@ -88,24 +91,27 @@ docker-compose up -d`
 
 Запуск тестов через Docker
 Если используется Docker Compose, тесты можно запустить в контейнере:
-
+'''
 `bash
 docker-compose run app mvn test`
-
+'''
 6. Настройка окружения
    application.properties
    Основные параметры:
 
+'''
 properties
 # Подключение к БД
 `spring.datasource.url=jdbc:postgresql://db:5432/platform_db
 spring.datasource.username=platform_user
 spring.datasource.password=platform_pass`
+'''
 
-
+''''
 # Hibernate
 `spring.jpa.hibernate.ddl-auto=update
 spring.sql.init.mode=always`
+''''
 
 
 # Порт приложения
@@ -119,6 +125,7 @@ Docker Compose (docker-compose.yml)
 PostgreSQL (db);
 
 pgAdmin (pgadmin).
+
 
 7. Дополнительные команды
    Собрать JAR: mvn clean package
