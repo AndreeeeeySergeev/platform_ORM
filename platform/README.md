@@ -13,26 +13,30 @@ Git (для клонирования репозитория)
 2. Структура проекта
 Проект организован по стандартному Maven‑шаблону:
 
-'''src/main/java/
+<pre>
+src/main/java/
 ├── controller/          # REST-контроллеры (API-эндпоинты)
 ├── dto/               # Объекты передачи данных (DTO)
 ├── exception/         # Пользовательские исключения и обработчики
 ├── model/             # Сущности БД (JPA-модели)
 ├── repository/          # JPA-репозитории
 ├── service/            # Бизнес-логика и сервисы
-└── config/            # Конфигурация Spring (БД, MVC, Security)'''
+└── config/            # Конфигурация Spring (БД, MVC, Security)
+</pre>
 
-
-'''src/test/java/
+<pre>
+src/test/java/
 ├── controller/         # Тесты контроллеров (интеграционные)
 ├── service/           # Тесты сервисов (юнит-тесты)
 └── repository/          # Тесты репозиториев'''
+</pre>
 
-
-'''src/main/resources/
+<pre>
+src/main/resources/
 ├── application.properties  # Конфигурация приложения
 ├── db/migration/       # SQL-миграции (если используются)
-└── static/              # Статические ресурсы (опционально)'''
+└── static/              # Статические ресурсы (опционально)
+</pre>
 
 Основные сущности (entity):
 
