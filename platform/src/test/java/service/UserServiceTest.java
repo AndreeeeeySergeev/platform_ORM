@@ -5,12 +5,9 @@ import exam.platform.entity.User.Role;
 import exam.platform.repository.UserRepository;
 import exam.platform.service.UserService;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;

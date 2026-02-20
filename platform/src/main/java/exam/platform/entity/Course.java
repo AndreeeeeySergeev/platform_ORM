@@ -32,7 +32,7 @@ public class Course {
     @OneToMany(mappedBy = "course", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Enrollment> enrollments = new ArrayList<>();
 
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "course", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List <Module> modules = new ArrayList<>();
 
     @ManyToMany
