@@ -1,5 +1,6 @@
 package service;
 
+import exam.platform.PlatformApplication;
 import exam.platform.entity.Course;
 import exam.platform.entity.User;
 import exam.platform.entity.Category;
@@ -12,12 +13,14 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest
+@SpringBootTest(classes = PlatformApplication.class)
+@ActiveProfiles("test")
 class CourseServiceIntegrationTest {
 
     @Autowired

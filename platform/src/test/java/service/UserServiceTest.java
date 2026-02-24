@@ -1,5 +1,6 @@
 package service;
 
+import exam.platform.PlatformApplication;
 import exam.platform.entity.User;
 import exam.platform.entity.User.Role;
 import exam.platform.repository.UserRepository;
@@ -7,12 +8,14 @@ import exam.platform.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest
+@SpringBootTest(classes = PlatformApplication.class)
+@ActiveProfiles("test")
 class UserServiceIntegrationTest {
 
     @Autowired
