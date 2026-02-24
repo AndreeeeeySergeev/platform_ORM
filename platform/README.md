@@ -15,28 +15,18 @@ Git (для клонирования репозитория)
 Проект организован по стандартному Maven‑шаблону:
 
 <pre>
-src/main/java/
-├── controller/          # REST-контроллеры (API-эндпоинты)
+src/main/java/platform
 ├── dto/               # Объекты передачи данных (DTO)
+├── entity/            # сущности
 ├── exception/         # Пользовательские исключения и обработчики
-├── model/             # Сущности БД (JPA-модели)
-├── repository/          # JPA-репозитории
-├── service/            # Бизнес-логика и сервисы
-└── config/            # Конфигурация Spring (БД, MVC, Security)
+├── repository/        # JPA-репозитории
+├── service/           #  сервисы
+└── resources/         # Конфигурация
 </pre>
 
 <pre>
 src/test/java/
-├── controller/         # Тесты контроллеров (интеграционные)
 ├── service/           # Тесты сервисов (юнит-тесты)
-└── repository/          # Тесты репозиториев'''
-</pre>
-
-<pre>
-src/main/resources/
-├── application.properties  # Конфигурация приложения
-├── db/migration/       # SQL-миграции (если используются)
-└── static/              # Статические ресурсы (опционально)
 </pre>
 
 Основные сущности (entity):
@@ -137,4 +127,5 @@ pgAdmin (pgadmin).
 Посмотреть логи: `docker-compose logs app`
 
 Остановить сервисы: `docker-compose down`
+
 
